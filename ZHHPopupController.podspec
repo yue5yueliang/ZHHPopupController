@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 ZHHPopupController一个可以轻松自定义弹出视图。支持自定义弹出动画，布局位置，蒙版效果，键盘监控，手势交互等
                        DESC
 
-  s.homepage         = 'https://github.com/ningxiaomo0516/ZHHPopupController'
+  s.homepage         = 'https://github.com/yue5yueliang/ZHHPopupController'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ningxiaomo0516' => '136769890@qq.com' }
-  s.source           = { :git => 'https://github.com/ningxiaomo0516/ZHHPopupController.git', :tag => s.version.to_s }
+  s.author           = { '宁小陌y' => '136769890@qq.com' }
+  s.source           = { :git => 'https://github.com/yue5yueliang/ZHHPopupController.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'

@@ -42,7 +42,7 @@
 		36E471CD87A08AE27D38520411D10294 /* Pods-ZHHPopupController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZHHPopupController_Tests-dummy.m"; sourceTree = "<group>"; };
 		3C1B8FC222EB1B0E6415044BD9C34B17 /* ZHHPopupController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZHHPopupController-dummy.m"; sourceTree = "<group>"; };
 		4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZHHPopupController; path = ZHHPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		454288A1B27D4EE0DFB4D11262C09D02 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZHHPopupController.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		454288A1B27D4EE0DFB4D11262C09D02 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZHHPopupController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		457043C6F48818119731CE4E1DBAC696 /* Pods-ZHHPopupController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49C2248380806971E4D7D3699B4AC8BF /* Pods-ZHHPopupController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZHHPopupController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4FB507C3D97763B7CEA8B27E3550783F /* Pods-ZHHPopupController_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZHHPopupController_Example-Info.plist"; sourceTree = "<group>"; };
@@ -56,14 +56,14 @@
 		879359FF0F2193C1BD473BEF1D4071EA /* ZHHPopupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZHHPopupController.h; path = ZHHPopupController/Classes/ZHHPopupController.h; sourceTree = "<group>"; };
 		87C99B9A39B0BC81FD93D7BF60EFB6D2 /* ZHHPopupController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZHHPopupController.modulemap; sourceTree = "<group>"; };
 		98BC832E8918D93C07EF487876B36F28 /* Pods-ZHHPopupController_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZHHPopupController_Tests"; path = Pods_ZHHPopupController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A2FBA768E3573659F3AE6CE6323CD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		99A2FBA768E3573659F3AE6CE6323CD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		9D251B5F3018C3204A3497280CED2060 /* Pods-ZHHPopupController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZHHPopupController_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A694E959AE1FF74EFF90740ABB45643E /* Pods-ZHHPopupController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A8D60E6629F6BA4ED9341900B17C506F /* ZHHPopupController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZHHPopupController.debug.xcconfig; sourceTree = "<group>"; };
 		AE46F83B8501D6EF6AE5748C326F1DED /* Pods-ZHHPopupController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZHHPopupController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B1454E41EBCAA7F92CCF8C3C67E74ACC /* Pods-ZHHPopupController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZHHPopupController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B5EAC22183CF8E7722EC8DFF56B5E6CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5EAC22183CF8E7722EC8DFF56B5E6CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BA349F35187CCE9290C9A993A664B2E4 /* Pods-ZHHPopupController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA8CFBF8D21CE8F6D95A833F8D3EB6DC /* ZHHPopupController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZHHPopupController-prefix.pch"; sourceTree = "<group>"; };
 		D2993CB2AA7391C3E94E375D05FA0452 /* Pods-ZHHPopupController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZHHPopupController_Tests.modulemap"; sourceTree = "<group>"; };
@@ -596,7 +596,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
