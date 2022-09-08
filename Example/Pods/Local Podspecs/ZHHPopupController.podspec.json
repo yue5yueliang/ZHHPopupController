@@ -1,0 +1,22 @@
+{
+  "name": "ZHHPopupController",
+  "version": "0.1.0",
+  "summary": "A short description of ZHHPopupController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ningxiaomo0516/ZHHPopupController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ningxiaomo0516": "136769890@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/ningxiaomo0516/ZHHPopupController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ZHHPopupController/Classes/**/*"
+}

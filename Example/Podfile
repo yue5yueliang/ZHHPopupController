@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+##忽略.cocoapods中多个specs源引起的警告问题
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+target 'ZHHPopupController_Example' do
+  pod 'ZHHPopupController', :path => '../'
+
+  target 'ZHHPopupController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
