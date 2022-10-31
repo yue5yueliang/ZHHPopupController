@@ -23,6 +23,8 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6360B8DE918C7727F77F5636 /* Pods_ZHHPopupController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456EE2A7A7C9815ED972C63 /* Pods_ZHHPopupController_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		E7559A6B28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */; };
+		E7559A7428DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Example.release.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C4C0537F88F3D3AD158BFB53 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZHHPopupController.podspec; path = ../ZHHPopupController.podspec; sourceTree = "<group>"; };
 		DB90CC95404D1AD94F55FB50 /* Pods-ZHHPopupController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7559A6928DB401300CEDBC7 /* UIViewController+StatusBarStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBarStyle.h"; sourceTree = "<group>"; };
+		E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBarStyle.m"; sourceTree = "<group>"; };
+		E7559A7228DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+zhStatusBarStyle.h"; sourceTree = "<group>"; };
+		E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+zhStatusBarStyle.m"; sourceTree = "<group>"; };
 		FF9591B7A53181747CC9C62D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +151,10 @@
 				6003F59D195388D20070C39A /* ZHHAppDelegate.m */,
 				6003F5A5195388D20070C39A /* ZHHViewController.h */,
 				6003F5A6195388D20070C39A /* ZHHViewController.m */,
+				E7559A7228DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.h */,
+				E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */,
+				E7559A6928DB401300CEDBC7 /* UIViewController+StatusBarStyle.h */,
+				E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -244,6 +254,9 @@
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = ningxiaomo0516;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = SZDA4KC2BK;
+					};
 					6003F5AD195388D20070C39A = {
 						DevelopmentTeam = SZDA4KC2BK;
 						TestTargetID = 6003F589195388D20070C39A;
@@ -362,7 +375,9 @@
 			files = (
 				6003F59E195388D20070C39A /* ZHHAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZHHViewController.m in Sources */,
+				E7559A6B28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				E7559A7428DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +535,7 @@
 			baseConfigurationReference = 59715E2662E2C835C6AF3DBB /* Pods-ZHHPopupController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SZDA4KC2BK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
 				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
@@ -536,6 +552,7 @@
 			baseConfigurationReference = BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SZDA4KC2BK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
 				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
