@@ -255,10 +255,10 @@
 				ORGANIZATIONNAME = ningxiaomo0516;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = SZDA4KC2BK;
+						DevelopmentTeam = VAU24NCP22;
 					};
 					6003F5AD195388D20070C39A = {
-						DevelopmentTeam = SZDA4KC2BK;
+						DevelopmentTeam = VAU24NCP22;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -535,7 +535,7 @@
 			baseConfigurationReference = 59715E2662E2C835C6AF3DBB /* Pods-ZHHPopupController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SZDA4KC2BK;
+				DEVELOPMENT_TEAM = VAU24NCP22;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
 				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
@@ -552,7 +552,7 @@
 			baseConfigurationReference = BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SZDA4KC2BK;
+				DEVELOPMENT_TEAM = VAU24NCP22;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
 				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
@@ -569,7 +569,7 @@
 			baseConfigurationReference = DB90CC95404D1AD94F55FB50 /* Pods-ZHHPopupController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = SZDA4KC2BK;
+				DEVELOPMENT_TEAM = VAU24NCP22;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -595,7 +595,7 @@
 			baseConfigurationReference = 17AE1BD2FF9707D9A4E72E29 /* Pods-ZHHPopupController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = SZDA4KC2BK;
+				DEVELOPMENT_TEAM = VAU24NCP22;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

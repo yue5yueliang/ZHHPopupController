@@ -15,9 +15,11 @@
     BOOL _directionalVertical;
     BOOL _isDirectionLocked;
 }
+@property (nonatomic, strong, readwrite) UIView *contentView;
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic, weak) UIView *proxyView;
-
+@property (nonatomic, strong) UITapGestureRecognizer    *tapGesture;
+@property (nonatomic, strong) UIPanGestureRecognizer    *panGesture;
 @end
 
 @implementation ZHHPopupController
@@ -50,7 +52,7 @@
         [self defaultValueInitialization];
         CGSize _size = CGSizeEqualToSize(CGSizeZero, size) ? aView.bounds.size : size;
         aView.frame = CGRectMake(0, 0, _size.width, _size.height);
-        _view = aView;
+        self.contentView = aView;
         __weak typeof(self) _self = self;
         self.defaultDismissBlock = ^(ZHHPopupController * _Nonnull popupController) {
             [_self dismiss];
@@ -68,7 +70,7 @@
     
     self.maskView.alpha = 0;
     [self prepareSlideStyle];
-    self.view.center = [self prepareCenter];
+    self.contentView.center = [self prepareCenter];
     
     __block void (^finishedCallback)(void) = ^() {
         self->_isPresenting = YES;
@@ -89,7 +91,7 @@
     };
     
     if (self.keyboardChangeFollowed && self.becomeFirstResponded) {
-        self.view.center = [self finalCenter];
+        self.contentView.center = [self finalCenter];
         if (self.willPresentBlock) {
             self.willPresentBlock(self);
         } else {
@@ -121,7 +123,7 @@
             
             [UIView animateWithDuration:duration delay:delay usingSpringWithDamping:0.6 initialSpringVelocity:0.25 options:options animations:^{
                 [self finalSlideStyle];
-                self.view.center = [self finalCenter];
+                self.contentView.center = [self finalCenter];
             } completion:^(BOOL finished) {
                 finishedCallback();
             }];
@@ -129,7 +131,7 @@
             [UIView animateWithDuration:duration delay:delay options:options animations:^{
                 self.maskView.alpha = 1;
                 [self finalSlideStyle];
-                self.view.center =  [self finalCenter];
+                self.contentView.center =  [self finalCenter];
             } completion:^(BOOL finished) {
                 finishedCallback();
             }];
@@ -153,7 +155,7 @@
     
     [UIView animateWithDuration:duration delay:delay options:options animations:^{
         [self dismissSlideStyle];
-        self.view.center = [self dismissedCenter];
+        self.contentView.center = [self dismissedCenter];
         self.maskView.alpha = 0;
     } completion:^(BOOL finished) {
         [self finalSlideStyle];
@@ -183,16 +185,16 @@
 
 - (void)addSubviewBelow:(UIView *)subview {
     [self.proxyView insertSubview:self.maskView belowSubview:subview];
-    [self.proxyView insertSubview:self.view aboveSubview:self.maskView];
+    [self.proxyView insertSubview:self.contentView aboveSubview:self.maskView];
 }
 
 - (void)addSubview {
     [self.proxyView addSubview:self.maskView];
-    [self.proxyView addSubview:self.view];
+    [self.proxyView addSubview:self.contentView];
 }
 
 - (void)removeSubviews {
-    [_view removeFromSuperview];
+    [self.contentView removeFromSuperview];
     [_maskView removeFromSuperview];
 }
 
@@ -207,11 +209,11 @@
 - (void)takeSlideStyle:(ZHHPopupSlideStyle)slideStyle scale:(CGFloat)scale {
     switch (slideStyle) {
         case ZHHPopupSlideStyleFade: {
-            self.view.alpha = 0;
+            self.contentView.alpha = 0;
         } break;
         case ZHHPopupSlideStyleTransform: {
-            self.view.alpha = 0;
-            self.view.transform = CGAffineTransformMakeScale(scale, scale);
+            self.contentView.alpha = 0;
+            self.contentView.transform = CGAffineTransformMakeScale(scale, scale);
         } break;
         default: break;
     }
@@ -220,11 +222,11 @@
 - (void)finalSlideStyle {
     switch (self.presentationStyle) {
         case ZHHPopupSlideStyleFade: {
-            self.view.alpha = 1;
+            self.contentView.alpha = 1;
         } break;
         case ZHHPopupSlideStyleTransform: {
-            self.view.alpha = 1;
-            self.view.transform = CGAffineTransformIdentity;
+            self.contentView.alpha = 1;
+            self.contentView.transform = CGAffineTransformIdentity;
         } break;
         default: break;
     }
@@ -239,38 +241,34 @@
 }
 
 - (CGPoint)takeCenter:(ZHHPopupSlideStyle)slideStyle {
+    CGSize contentViewSize = self.contentView.bounds.size;
+    CGSize maskViewSize = self.maskView.bounds.size;
     switch (slideStyle) {
         case ZHHPopupSlideStyleFromTop:
-            return CGPointMake([self finalCenter].x,
-                               -self.view.bounds.size.height / 2);
+            return CGPointMake([self finalCenter].x, -contentViewSize.height / 2);
         case ZHHPopupSlideStyleFromLeft:
-            return CGPointMake(-self.view.bounds.size.width / 2,
-                               [self finalCenter].y);
+            return CGPointMake(-contentViewSize.width / 2, [self finalCenter].y);
         case ZHHPopupSlideStyleFromBottom:
-            return CGPointMake([self finalCenter].x,
-                               self.maskView.bounds.size.height + self.view.bounds.size.height / 2);
+            return CGPointMake([self finalCenter].x, maskViewSize.height + contentViewSize.height / 2);
         case ZHHPopupSlideStyleFromRight:
-            return CGPointMake(self.maskView.bounds.size.width + self.view.bounds.size.width / 2,
-                               [self finalCenter].y);
+            return CGPointMake(maskViewSize.width + contentViewSize.width / 2, [self finalCenter].y);
         default:
             return [self finalCenter];
     }
 }
 
 - (CGPoint)finalCenter {
+    CGSize contentViewSize = self.contentView.bounds.size;
+    CGSize maskViewSize = self.maskView.bounds.size;
     switch (self.layoutType) {
         case ZHHPopupLayoutTypeTop:
-            return CGPointMake(self.maskView.center.x,
-                               self.view.bounds.size.height / 2 + self.offsetSpacing);
+            return CGPointMake(self.maskView.center.x, contentViewSize.height / 2 + self.offsetSpacing);
         case ZHHPopupLayoutTypeLeft:
-            return CGPointMake(self.view.bounds.size.width / 2 + self.offsetSpacing,
-                               self.maskView.center.y);
+            return CGPointMake(contentViewSize.width / 2 + self.offsetSpacing, self.maskView.center.y);
         case ZHHPopupLayoutTypeBottom:
-            return CGPointMake(self.maskView.center.x,
-                               self.maskView.bounds.size.height - self.view.bounds.size.height / 2 - self.offsetSpacing);
+            return CGPointMake(self.maskView.center.x, maskViewSize.height - contentViewSize.height / 2 - self.offsetSpacing);
         case ZHHPopupLayoutTypeRight:
-            return CGPointMake(self.maskView.bounds.size.width - self.view.bounds.size.width / 2 - self.offsetSpacing,
-                               self.maskView.center.y);
+            return CGPointMake(maskViewSize.width - maskViewSize.width / 2 - self.offsetSpacing, self.maskView.center.y);
         case ZHHPopupLayoutTypeCenter:
             /// only adjust center.y
             return CGPointMake(self.maskView.center.x, self.maskView.center.y + self.offsetSpacing);
@@ -311,12 +309,11 @@
             } break;
             default: break;
         }
-        UITapGestureRecognizer *tap  = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-        tap.delegate = self;
-        [_maskView addGestureRecognizer:tap];
+        
+        // 添加手势
+        [self.maskView addGestureRecognizer:self.tapGesture];
         if (self.panGestureEnabled) {
-            UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-            [self.view addGestureRecognizer:pan];
+            [self.contentView addGestureRecognizer:self.panGesture];
         }
     }
     return _maskView;
@@ -324,12 +321,25 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
-        return ![touch.view isDescendantOfView:self.view];
+        return ![touch.view isDescendantOfView:self.contentView];
     }
     return YES;
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)g {
+// 是否与其他手势共存(新增)
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (gestureRecognizer == self.panGesture) {
+        if ([otherGestureRecognizer isKindOfClass:NSClassFromString(@"UIScrollViewPanGestureRecognizer")] || [otherGestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+            if ([otherGestureRecognizer.view isKindOfClass:[UIScrollView class]]) {
+                return YES;
+            }
+        }
+    }
+    return NO;
+}
+
+#pragma mark - HandleGesture
+- (void)handleTapGesture:(UITapGestureRecognizer *)tapGesture {
     if (self.isPresenting && self.dismissOnMaskTouched) {
         if (self.defaultDismissBlock) {
             self.defaultDismissBlock(self);
@@ -337,58 +347,57 @@
     }
 }
 
-- (void)handlePan:(UIPanGestureRecognizer *)g {
+- (void)handlePanGesture:(UIPanGestureRecognizer *)panGesture {
     if (_isKeyboardVisible || !self.panGestureEnabled) return;
-    CGPoint p = [g translationInView:self.maskView];
+    CGPoint pan = [panGesture translationInView:self.maskView];
     
-    switch (g.state) {
+    switch (panGesture.state) {
         case UIGestureRecognizerStateBegan:
             break;
         case UIGestureRecognizerStateChanged: {
-            
             switch (self.layoutType) {
                 case ZHHPopupLayoutTypeTop: {
-                    CGFloat boundary = g.view.bounds.size.height + self.offsetSpacing;
-                    if ((CGRectGetMinY(g.view.frame) + g.view.bounds.size.height + p.y) < boundary) {
-                        g.view.center = CGPointMake(g.view.center.x, g.view.center.y + p.y);
+                    CGFloat boundary = panGesture.view.bounds.size.height + self.offsetSpacing;
+                    if ((CGRectGetMinY(panGesture.view.frame) + panGesture.view.bounds.size.height + pan.y) < boundary) {
+                        panGesture.view.center = CGPointMake(panGesture.view.center.x, panGesture.view.center.y + pan.y);
                     } else {
-                        g.view.center = [self finalCenter];
+                        panGesture.view.center = [self finalCenter];
                     }
-                    self.maskView.alpha = CGRectGetMaxY(g.view.frame) / boundary;
+                    self.maskView.alpha = CGRectGetMaxY(panGesture.view.frame) / boundary;
                 } break;
                 case ZHHPopupLayoutTypeLeft: {
-                    CGFloat boundary = g.view.bounds.size.width + self.offsetSpacing;
-                    if ((CGRectGetMinX(g.view.frame) + g.view.bounds.size.width + p.x) < boundary) {
-                        g.view.center = CGPointMake(g.view.center.x + p.x, g.view.center.y);
+                    CGFloat boundary = panGesture.view.bounds.size.width + self.offsetSpacing;
+                    if ((CGRectGetMinX(panGesture.view.frame) + panGesture.view.bounds.size.width + pan.x) < boundary) {
+                        panGesture.view.center = CGPointMake(panGesture.view.center.x + pan.x, panGesture.view.center.y);
                     } else {
-                        g.view.center = [self finalCenter];
+                        panGesture.view.center = [self finalCenter];
                     }
-                    self.maskView.alpha = CGRectGetMaxX(g.view.frame) / boundary;
+                    self.maskView.alpha = CGRectGetMaxX(panGesture.view.frame) / boundary;
                 } break;
                 case ZHHPopupLayoutTypeBottom: {
-                    CGFloat boundary = self.maskView.bounds.size.height - g.view.bounds.size.height - self.offsetSpacing;
-                    if ((g.view.frame.origin.y + p.y) > boundary) {
-                        g.view.center = CGPointMake(g.view.center.x, g.view.center.y + p.y);
+                    CGFloat boundary = self.maskView.bounds.size.height - panGesture.view.bounds.size.height - self.offsetSpacing;
+                    if ((panGesture.view.frame.origin.y + pan.y) > boundary) {
+                        panGesture.view.center = CGPointMake(panGesture.view.center.x, panGesture.view.center.y + pan.y);
                     } else {
-                        g.view.center = [self finalCenter];
+                        panGesture.view.center = [self finalCenter];
                     }
-                    self.maskView.alpha = 1 - (CGRectGetMinY(g.view.frame) - boundary) / (self.maskView.bounds.size.height - boundary);
+                    self.maskView.alpha = 1 - (CGRectGetMinY(panGesture.view.frame) - boundary) / (self.maskView.bounds.size.height - boundary);
                 } break;
                 case ZHHPopupLayoutTypeRight: {
-                    CGFloat boundary = self.maskView.bounds.size.width - g.view.bounds.size.width - self.offsetSpacing;
-                    if ((CGRectGetMinX(g.view.frame) + p.x) > boundary) {
-                        g.view.center = CGPointMake(g.view.center.x + p.x, g.view.center.y);
+                    CGFloat boundary = self.maskView.bounds.size.width - panGesture.view.bounds.size.width - self.offsetSpacing;
+                    if ((CGRectGetMinX(panGesture.view.frame) + pan.x) > boundary) {
+                        panGesture.view.center = CGPointMake(panGesture.view.center.x + pan.x, panGesture.view.center.y);
                     } else {
-                        g.view.center = [self finalCenter];
+                        panGesture.view.center = [self finalCenter];
                     }
-                    self.maskView.alpha = 1 - (CGRectGetMinX(g.view.frame) - boundary) / (self.maskView.bounds.size.width - boundary);
+                    self.maskView.alpha = 1 - (CGRectGetMinX(panGesture.view.frame) - boundary) / (self.maskView.bounds.size.width - boundary);
                 } break;
                 case ZHHPopupLayoutTypeCenter: {
-                    [self directionalLock:p];
+                    [self directionalLock:pan];
                     if (_directionalVertical) {
-                        g.view.center = CGPointMake(g.view.center.x, g.view.center.y + p.y);
-                        CGFloat boundary = self.maskView.bounds.size.height / 2 + self.offsetSpacing - g.view.bounds.size.height / 2;
-                        self.maskView.alpha = 1 - (CGRectGetMinY(g.view.frame) - boundary) / (self.maskView.bounds.size.height - boundary);
+                        panGesture.view.center = CGPointMake(panGesture.view.center.x, panGesture.view.center.y + pan.y);
+                        CGFloat boundary = self.maskView.bounds.size.height / 2 + self.offsetSpacing - panGesture.view.bounds.size.height / 2;
+                        self.maskView.alpha = 1 - (CGRectGetMinY(panGesture.view.frame) - boundary) / (self.maskView.bounds.size.height - boundary);
                     } else {
                         [self directionalUnlock]; // todo...
                     }
@@ -396,7 +405,7 @@
                 default: break;
             }
             
-            [g setTranslation:CGPointZero inView:self.maskView];
+            [panGesture setTranslation:CGPointZero inView:self.maskView];
         } break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
@@ -405,20 +414,20 @@
             BOOL isDismissNeeded = NO;
             switch (self.layoutType) {
                 case ZHHPopupLayoutTypeTop: {
-                    isDismissNeeded = CGRectGetMaxY(g.view.frame) < self.maskView.bounds.size.height * self.panDismissRatio;
+                    isDismissNeeded = CGRectGetMaxY(panGesture.view.frame) < self.maskView.bounds.size.height * self.panDismissRatio;
                 } break;
                 case ZHHPopupLayoutTypeLeft: {
-                    isDismissNeeded = CGRectGetMaxX(g.view.frame) < self.maskView.bounds.size.width * self.panDismissRatio;
+                    isDismissNeeded = CGRectGetMaxX(panGesture.view.frame) < self.maskView.bounds.size.width * self.panDismissRatio;
                 } break;
                 case ZHHPopupLayoutTypeBottom: {
-                    isDismissNeeded = CGRectGetMinY(g.view.frame) > self.maskView.bounds.size.height * self.panDismissRatio;
+                    isDismissNeeded = CGRectGetMinY(panGesture.view.frame) > self.maskView.bounds.size.height * self.panDismissRatio;
                 } break;
                 case ZHHPopupLayoutTypeRight: {
-                    isDismissNeeded = CGRectGetMinX(g.view.frame) > self.maskView.bounds.size.width * self.panDismissRatio;
+                    isDismissNeeded = CGRectGetMinX(panGesture.view.frame) > self.maskView.bounds.size.width * self.panDismissRatio;
                 } break;
                 case ZHHPopupLayoutTypeCenter: {
                     if (_directionalVertical) {
-                        isDismissNeeded = CGRectGetMinY(g.view.frame) > self.maskView.bounds.size.height * self.panDismissRatio;
+                        isDismissNeeded = CGRectGetMinY(panGesture.view.frame) > self.maskView.bounds.size.height * self.panDismissRatio;
                         [self directionalUnlock];
                     }
                 } break;
@@ -432,7 +441,7 @@
             } else {
                 [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                     self.maskView.alpha = 1;
-                    g.view.center = [self finalCenter];
+                    panGesture.view.center = [self finalCenter];
                 } completion:NULL];
             }
             
@@ -480,7 +489,7 @@
         UIViewAnimationOptions options = [u[UIKeyboardAnimationCurveUserInfoKey] integerValue] << 16;
         NSTimeInterval duration = [u[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
         [UIView animateWithDuration:duration delay:0 options:options animations:^{
-            self.view.center = [self finalCenter];
+            self.contentView.center = [self finalCenter];
         } completion:NULL];
     }
 }
@@ -495,15 +504,32 @@
         if (keyboardHeightConverted > 0) {
             _isKeyboardVisible = YES;
         
-            CGFloat originY = CGRectGetMaxY(self.view.frame) - CGRectGetMinY(frameConverted);
-            CGPoint newCenter = CGPointMake(self.view.center.x, self.view.center.y - originY - self.keyboardOffsetSpacing);
+            CGFloat originY = CGRectGetMaxY(self.contentView.frame) - CGRectGetMinY(frameConverted);
+            CGPoint newCenter = CGPointMake(self.contentView.center.x, self.contentView.center.y - originY - self.keyboardOffsetSpacing);
             NSTimeInterval duration = [u[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
             UIViewAnimationOptions options = [u[UIKeyboardAnimationCurveUserInfoKey] integerValue] << 16;
             [UIView animateWithDuration:duration delay:0 options:options animations:^{
-                self.view.center = newCenter;
+                self.contentView.center = newCenter;
             } completion:NULL];
         }
     }
+}
+
+#pragma mark - 懒加载
+- (UITapGestureRecognizer *)tapGesture {
+    if (!_tapGesture) {
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+        _tapGesture.delegate = self;
+    }
+    return _tapGesture;
+}
+
+- (UIPanGestureRecognizer *)panGesture {
+    if (!_panGesture) {
+        _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+        _panGesture.delegate = self;
+    }
+    return _panGesture;
 }
 
 - (void)dealloc {
@@ -517,19 +543,19 @@ static void *UIViewZHHPopupControllersKey = &UIViewZHHPopupControllersKey;
 
 @implementation UIView (ZHHPopupController)
 
-- (void)zhhpresentPopupController:(ZHHPopupController *)popupController completion:(void (^)(void))completion {
-    return [self zhhpresentPopupController:popupController duration:0.25 completion:completion];
+- (void)zhh_presentPopupController:(ZHHPopupController *)popupController completion:(void (^)(void))completion {
+    return [self zhh_presentPopupController:popupController duration:0.25 completion:completion];
 }
 
-- (void)zhhpresentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration completion:(void (^)(void))completion {
-    return [self zhhpresentPopupController:popupController duration:duration bounced:NO completion:completion];
+- (void)zhh_presentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration completion:(void (^)(void))completion {
+    return [self zhh_presentPopupController:popupController duration:duration bounced:NO completion:completion];
 }
 
-- (void)zhhpresentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration bounced:(BOOL)isBounced completion:(void (^)(void))completion {
-    return [self zhhpresentPopupController:popupController duration:duration delay:0 options:UIViewAnimationOptionCurveLinear bounced:isBounced completion:completion];
+- (void)zhh_presentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration bounced:(BOOL)isBounced completion:(void (^)(void))completion {
+    return [self zhh_presentPopupController:popupController duration:duration delay:0 options:UIViewAnimationOptionCurveLinear bounced:isBounced completion:completion];
 }
 
-- (void)zhhpresentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options bounced:(BOOL)isBounced completion:(void (^)(void))completion {
+- (void)zhh_presentPopupController:(ZHHPopupController *)popupController duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options bounced:(BOOL)isBounced completion:(void (^)(void))completion {
     NSMutableArray<ZHHPopupController *> *_popupControllers = objc_getAssociatedObject(self, UIViewZHHPopupControllersKey);
     if (!_popupControllers) {
         _popupControllers = [[NSMutableArray alloc] init];
@@ -598,23 +624,23 @@ static void *UIViewZHHPopupControllersKey = &UIViewZHHPopupControllersKey;
 }
 
 - (void)show {
-    return [self.keyWindow zhhpresentPopupController:self completion:NULL];
+    return [self.keyWindow zhh_presentPopupController:self completion:NULL];
 }
 
 - (void)showInView:(UIView *)view completion:(void (^)(void))completion {
-    return [view zhhpresentPopupController:self completion:completion];
+    return [view zhh_presentPopupController:self completion:completion];
 }
 
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^)(void))completion {
-    return [view zhhpresentPopupController:self duration:duration completion:completion];
+    return [view zhh_presentPopupController:self duration:duration completion:completion];
 }
 
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration bounced:(BOOL)bounced completion:(void (^)(void))completion {
-    return [view zhhpresentPopupController:self duration:duration bounced:bounced completion:completion];
+    return [view zhh_presentPopupController:self duration:duration bounced:bounced completion:completion];
 }
 
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options bounced:(BOOL)bounced completion:(void (^)(void))completion {
-    return [view zhhpresentPopupController:self duration:duration delay:delay options:options bounced:bounced completion:completion];
+    return [view zhh_presentPopupController:self duration:duration delay:delay options:options bounced:bounced completion:completion];
 }
 
 - (void)dismiss {

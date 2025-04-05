@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// Control view mask style
+/// 控制视图遮罩样式
 typedef NS_ENUM(NSUInteger, ZHHPopupMaskType) {
     ZHHPopupMaskTypeDarkBlur = 0,
     ZHHPopupMaskTypeLightBlur,
@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, ZHHPopupMaskType) {
     ZHHPopupMaskTypeBlackOpacity // default
 };
 
-/// Control the style of view Presenting
+/// 控制视图呈现样式
 typedef NS_ENUM(NSInteger, ZHHPopupSlideStyle) {
     ZHHPopupSlideStyleFromTop = 0,
     ZHHPopupSlideStyleFromBottom,
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, ZHHPopupSlideStyle) {
     ZHHPopupSlideStyleTransform
 };
 
-/// Control where the view finally position
+/// 控制视图的最终位置
 typedef NS_ENUM(NSUInteger, ZHHPopupLayoutType) {
     ZHHPopupLayoutTypeTop = 0,
     ZHHPopupLayoutTypeBottom,
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger, ZHHPopupLayoutType) {
     ZHHPopupLayoutTypeCenter // default
 };
 
-/// Control the display level of the PopupController
+/// 控制PopupController的显示层级
 typedef NS_ENUM(NSUInteger, ZHHPopupWindowLevel) {
     ZHHPopupWindowLevelVeryHigh = 0,
     ZHHPopupWindowLevelHigh,
@@ -57,109 +57,108 @@ typedef NS_ENUM(NSUInteger, ZHHPopupWindowLevel) {
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-/// Designated initializer，Must set your content view and its size.
-/// Bind the view to a popup controller，one-to-one
+/// 指定的初始化方法，必须设置内容视图及其大小。将视图绑定到弹出控制器，一对一
 - (instancetype)initWithView:(UIView *)popupView size:(CGSize)size;
 
-/// The view is the initialized `popupView`
-@property (nonatomic, strong, readonly) UIView *view;
+/// 视图已初始化弹出视图
+@property (nonatomic, strong, readonly) UIView *contentView;
 
-/// Whether contentView is presenting.
+/// 内容视图是否正在显示
 @property (nonatomic, assign, readonly) BOOL isPresenting;
 
-/// Set popup view mask style. default is ZHHPopupMaskTypeBlackOpacity (maskAlpha: 0.5)
+/// 设置弹出视图的遮罩样式。默认值是 ZHHPopupMaskTypeBlackOpacity（遮罩透明度：0.5）
 @property (nonatomic, assign) ZHHPopupMaskType maskType;
 
-/// Set popup view display position. default is ZHHPopupLayoutTypeCenter
+/// 设置弹出视图的显示位置。默认值是 ZHHPopupLayoutTypeCenter
 @property (nonatomic, assign) ZHHPopupLayoutType layoutType;
 
-/// Set popup view present slide style. default is ZHHPopupSlideStyleFade
+/// 设置弹出视图的呈现滑动样式。默认值是 ZHHPopupSlideStyleFade
 @property (nonatomic, assign) ZHHPopupSlideStyle presentationStyle;
 
-/// Set popup view dismiss slide style. default is `presentationStyle`
+/// 设置弹出视图的消失滑动样式。默认值是 presentationStyle
 @property (nonatomic, assign) ZHHPopupSlideStyle dismissonStyle;
 
-/// Set popup view priority. default is ZHHPopupWindowLevelNormal
+/// 设置弹出视图的优先级。默认值是 ZHHPopupWindowLevelNormal
 @property (nonatomic, assign) ZHHPopupWindowLevel windowLevel;
 
-/// default is 0.5, When maskType is ZHHPopupMaskTypeBlackOpacity vaild.
+/// 默认为 0.5，当 maskType 是 ZHHPopupMaskTypeBlackOpacity 时有效。
 @property (nonatomic, assign) CGFloat maskAlpha;
 
-/// default is 0.5, When slideStyle is ZHHPopupSlideStyleTransform vaild.
+/// 默认为 0.5，当 slideStyle 为 ZHHPopupSlideStyleTransform 时有效。
 @property (nonatomic, assign) CGFloat presentationTransformScale;
 
-/// default is `presentationTransformScale`, When slideStyle is ZHHPopupSlideStyleTransform vaild.
+/// 默认为 presentationTransformScale，当 slideStyle 为 ZHHPopupSlideStyleTransform 时有效。
 @property (nonatomic, assign) CGFloat dismissonTransformScale;
 
-/// default is YES. if NO, Mask view will not respond to events.
+/// 默认为 YES。如果为 NO，遮罩视图将不会响应事件。
 @property (nonatomic, assign) BOOL dismissOnMaskTouched;
 
-/// The view will disappear after `dismissAfterDelay` seconds，default is 0 will not disappear
+/// 视图将在 dismissAfterDelay 秒后消失，默认值为 0，表示不会消失。
 @property (nonatomic, assign) NSTimeInterval dismissAfterDelay;
 
-/// default is NO. if YES, Popup view will allow to drag
+/// 默认为 NO。如果设置为 YES，弹出视图将允许拖动。
 @property (nonatomic, assign) BOOL panGestureEnabled;
 
-/// When drag position meets the screen ratio the view will dismiss，default is 0.5
+/// 当拖动位置达到屏幕比例时，视图将消失，默认值为 0.5。
 @property (nonatomic, assign) CGFloat panDismissRatio;
 
-/// Adjust the layout position by `offsetSpacing`
+/// 通过 offsetSpacing 调整布局位置
 @property (nonatomic, assign) CGFloat offsetSpacing;
 
-/// Adjust the spacing between with the keyboard
+/// 调整与键盘之间的间距
 @property (nonatomic, assign) CGFloat keyboardOffsetSpacing;
 
-/// default is NO. if YES, Will adjust view position when keyboard changes
+/// 默认为 NO。如果设置为 YES，当键盘变化时将调整视图位置。
 @property (nonatomic, assign) BOOL keyboardChangeFollowed;
 
-/// default is NO. if the view becomes first responder，you need set YES to keep the animation consistent
-/// If you want to make the animation consistent:
-/// You need to call the method "becomeFirstResponder()" in "willPresentBlock", don't call it before that.
-/// You need to call the method "resignFirstResponder()" in "willDismissBlock".
+/// 默认为 NO。如果视图成为第一响应者，需要设置为 YES 以保持动画的一致性。
+/// 如果你想保持动画的一致性：
+/// 你需要在 willPresentBlock 中调用 becomeFirstResponder() 方法，不要在此之前调用。
+/// 你需要在 willDismissBlock 中调用 resignFirstResponder() 方法。
 @property (nonatomic, assign) BOOL becomeFirstResponded;
 
-/// Block gets called when internal trigger dismiss.
+/// 当内部触发消失时，块会被调用。
 @property (nonatomic, copy) void (^defaultDismissBlock)(ZHHPopupController *popupController);
 
-/// Block gets called when contentView will present.
+/// 当 contentView 将要呈现时，块会被调用。
 @property (nonatomic, copy) void (^willPresentBlock)(ZHHPopupController *popupController);
 
-/// Block gets called when contentView did present.
+/// 当 contentView 已经呈现时，块会被调用。
 @property (nonatomic, copy) void (^didPresentBlock)(ZHHPopupController *popupController);
 
-/// Block gets called when contentView will dismiss.
+/// 当 contentView 将要消失时，块会被调用。
 @property (nonatomic, copy) void (^willDismissBlock)(ZHHPopupController *popupController);
 
-/// Block gets called when contentView did dismiss.
+/// 当 contentView 已经消失时，块会被调用。
 @property (nonatomic, copy) void (^didDismissBlock)(ZHHPopupController *popupController);
 
 @end
 
 
-@interface ZHHPopupController (Convenient)
+@interface ZHHPopupController (quick)
 
-/// shows popup view animated in window
+/// 在窗口中以动画方式显示弹出视图
 - (void)show;
 
-/// shows popup view animated.
+/// 以动画方式显示弹出视图
 - (void)showInView:(UIView *)view completion:(void (^ __nullable)(void))completion;
 
-/// shows popup view animated using the specified duration.
+/// 使用指定的持续时间以动画方式显示弹出视图
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration completion:(void (^ __nullable)(void))completion;
 
-/// shows popup view animated using the specified duration and bounced.
+/// 使用指定的持续时间和弹跳效果以动画方式显示弹出视图
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration bounced:(BOOL)bounced completion:(void (^ __nullable)(void))completion;
 
-/// shows popup view animated using the specified duration, delay, options, bounced, and completion handler.
+/// 使用指定的持续时间、延迟、选项、弹跳效果和完成处理程序以动画方式显示弹出视图
 - (void)showInView:(UIView *)view duration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options bounced:(BOOL)bounced completion:(void (^ __nullable)(void))completion;
 
-/// hide popup view animated
+/// 以动画方式隐藏弹出视图
 - (void)dismiss;
 
-/// hide popup view animated using the specified duration.
+/// 使用指定的持续时间以动画方式隐藏弹出视图
 - (void)dismissWithDuration:(NSTimeInterval)duration completion:(void (^ __nullable)(void))completion;
 
-/// hide popup view animated using the specified duration, delay, options, and completion handler.
+/// 使用指定的持续时间、延迟、选项和完成处理程序以动画方式隐藏弹出视图
 - (void)dismissWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options completion:(void (^ __nullable)(void))completion;
 
 @end
@@ -168,7 +167,7 @@ typedef NS_ENUM(NSUInteger, ZHHPopupWindowLevel) {
 @protocol ZHHPopupControllerDelegate <NSObject>
 @optional
 
-// - The Delegate method, block is preferred.
+//  委托方法，推荐使用块（block）。
 - (void)popupControllerWillPresent:(ZHHPopupController *)popupController;
 - (void)popupControllerDidPresent:(ZHHPopupController *)popupController;
 - (void)popupControllerWillDismiss:(ZHHPopupController *)popupController;
