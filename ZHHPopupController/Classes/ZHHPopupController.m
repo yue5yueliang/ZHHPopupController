@@ -616,11 +616,16 @@ static void *UIViewZHHPopupControllersKey = &UIViewZHHPopupControllersKey;
 - (UIWindow *)keyWindow {
     UIWindow *window = UIApplication.sharedApplication.delegate.window;
     if (window) return window;
-    if (@available(iOS 13.0, *)) {
-        return UIApplication.sharedApplication.windows.firstObject;
-    } else {
-        return UIApplication.sharedApplication.keyWindow;
+
+    for (UIWindowScene *scene in UIApplication.sharedApplication.connectedScenes) {
+        if (scene.activationState == UISceneActivationStateForegroundActive &&
+            [scene isKindOfClass:[UIWindowScene class]]) {
+            UIWindow *keyWindow = ((UIWindowScene *)scene).windows.firstObject;
+            if (keyWindow) return keyWindow;
+        }
     }
+
+    return UIApplication.sharedApplication.windows.firstObject;
 }
 
 - (void)show {

@@ -42,8 +42,8 @@
 		36E471CD87A08AE27D38520411D10294 /* Pods-ZHHPopupController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZHHPopupController_Tests-dummy.m"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3C1B8FC222EB1B0E6415044BD9C34B17 /* ZHHPopupController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZHHPopupController-dummy.m"; sourceTree = "<group>"; };
-		4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZHHPopupController; path = ZHHPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		454288A1B27D4EE0DFB4D11262C09D02 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZHHPopupController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHHPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454288A1B27D4EE0DFB4D11262C09D02 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ZHHPopupController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		457043C6F48818119731CE4E1DBAC696 /* Pods-ZHHPopupController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49C2248380806971E4D7D3699B4AC8BF /* Pods-ZHHPopupController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZHHPopupController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4FB507C3D97763B7CEA8B27E3550783F /* Pods-ZHHPopupController_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZHHPopupController_Example-Info.plist"; sourceTree = "<group>"; };
@@ -51,19 +51,19 @@
 		5733309464530FF7D3B903000E1CCB5E /* Pods-ZHHPopupController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZHHPopupController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		59B0DB7F48B13C028182926EBA9DFD98 /* Pods-ZHHPopupController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZHHPopupController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		61BFD6DF9EEA0D8C3C97DD7934F9676F /* Pods-ZHHPopupController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZHHPopupController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		761CDED50D59C34A7A9383A9EE24897E /* Pods-ZHHPopupController_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZHHPopupController_Example"; path = Pods_ZHHPopupController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		761CDED50D59C34A7A9383A9EE24897E /* Pods_ZHHPopupController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7986190BC22FF9A8CF0E6CC012DFF035 /* Pods-ZHHPopupController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		879359FF0F2193C1BD473BEF1D4071EA /* ZHHPopupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZHHPopupController.h; path = ZHHPopupController/Classes/ZHHPopupController.h; sourceTree = "<group>"; };
 		87C99B9A39B0BC81FD93D7BF60EFB6D2 /* ZHHPopupController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZHHPopupController.modulemap; sourceTree = "<group>"; };
-		98BC832E8918D93C07EF487876B36F28 /* Pods-ZHHPopupController_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZHHPopupController_Tests"; path = Pods_ZHHPopupController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A2FBA768E3573659F3AE6CE6323CD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		98BC832E8918D93C07EF487876B36F28 /* Pods_ZHHPopupController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A2FBA768E3573659F3AE6CE6323CD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9D251B5F3018C3204A3497280CED2060 /* Pods-ZHHPopupController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZHHPopupController_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A694E959AE1FF74EFF90740ABB45643E /* Pods-ZHHPopupController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A8D60E6629F6BA4ED9341900B17C506F /* ZHHPopupController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZHHPopupController.debug.xcconfig; sourceTree = "<group>"; };
 		AE46F83B8501D6EF6AE5748C326F1DED /* Pods-ZHHPopupController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZHHPopupController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B1454E41EBCAA7F92CCF8C3C67E74ACC /* Pods-ZHHPopupController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZHHPopupController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B5EAC22183CF8E7722EC8DFF56B5E6CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B5EAC22183CF8E7722EC8DFF56B5E6CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BA349F35187CCE9290C9A993A664B2E4 /* Pods-ZHHPopupController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZHHPopupController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA8CFBF8D21CE8F6D95A833F8D3EB6DC /* ZHHPopupController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZHHPopupController-prefix.pch"; sourceTree = "<group>"; };
 		D2993CB2AA7391C3E94E375D05FA0452 /* Pods-ZHHPopupController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZHHPopupController_Tests.modulemap"; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 		0E411CA091018B86A0D7C4801F72D45A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				761CDED50D59C34A7A9383A9EE24897E /* Pods-ZHHPopupController_Example */,
-				98BC832E8918D93C07EF487876B36F28 /* Pods-ZHHPopupController_Tests */,
-				4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController */,
+				761CDED50D59C34A7A9383A9EE24897E /* Pods_ZHHPopupController_Example.framework */,
+				98BC832E8918D93C07EF487876B36F28 /* Pods_ZHHPopupController_Tests.framework */,
+				4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			);
 			name = ZHHPopupController;
 			productName = ZHHPopupController;
-			productReference = 4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController */;
+			productReference = 4235B61D89DD2CA68F05B39B4EBF7BF7 /* ZHHPopupController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		509E16CF1A11A4D07758A8AB8F7B7863 /* Pods-ZHHPopupController_Tests */ = {
@@ -291,7 +291,7 @@
 			);
 			name = "Pods-ZHHPopupController_Tests";
 			productName = Pods_ZHHPopupController_Tests;
-			productReference = 98BC832E8918D93C07EF487876B36F28 /* Pods-ZHHPopupController_Tests */;
+			productReference = 98BC832E8918D93C07EF487876B36F28 /* Pods_ZHHPopupController_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EBF0C97EC0C42DE2569A9CC55357BF43 /* Pods-ZHHPopupController_Example */ = {
@@ -310,7 +310,7 @@
 			);
 			name = "Pods-ZHHPopupController_Example";
 			productName = Pods_ZHHPopupController_Example;
-			productReference = 761CDED50D59C34A7A9383A9EE24897E /* Pods-ZHHPopupController_Example */;
+			productReference = 761CDED50D59C34A7A9383A9EE24897E /* Pods_ZHHPopupController_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -319,8 +319,9 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1630;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 12.0";
@@ -331,8 +332,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 0E411CA091018B86A0D7C4801F72D45A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -417,15 +416,13 @@
 			baseConfigurationReference = DE33664CF85247395D0933857360F269 /* ZHHPopupController.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/ZHHPopupController/ZHHPopupController-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
@@ -438,6 +435,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/ZHHPopupController/ZHHPopupController.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_MODULE_NAME = ZHHPopupController;
 				PRODUCT_NAME = ZHHPopupController;
 				SDKROOT = iphoneos;
@@ -457,15 +455,13 @@
 			baseConfigurationReference = A8D60E6629F6BA4ED9341900B17C506F /* ZHHPopupController.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/ZHHPopupController/ZHHPopupController-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
@@ -478,6 +474,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/ZHHPopupController/ZHHPopupController.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_MODULE_NAME = ZHHPopupController;
 				PRODUCT_NAME = ZHHPopupController;
 				SDKROOT = iphoneos;
@@ -526,6 +523,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -549,7 +547,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -592,6 +589,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -611,7 +609,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -623,17 +620,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA349F35187CCE9290C9A993A664B2E4 /* Pods-ZHHPopupController_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -645,6 +639,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -663,17 +658,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7986190BC22FF9A8CF0E6CC012DFF035 /* Pods-ZHHPopupController_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -685,6 +677,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -702,17 +695,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 457043C6F48818119731CE4E1DBAC696 /* Pods-ZHHPopupController_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -724,6 +714,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -742,17 +733,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A694E959AE1FF74EFF90740ABB45643E /* Pods-ZHHPopupController_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -764,6 +752,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.modulemap";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
