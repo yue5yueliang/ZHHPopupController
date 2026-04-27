@@ -18,7 +18,11 @@ extension UIView {
     /// 确保当前 view 上存在弹窗容器；若已存在则复用并置顶
     private func ensurePopupContainer() -> ZHHPopupContainerView {
         if let existing = popupContainerIfLoaded {
-            bringSubview(toFront: existing)
+            // 用 remove/add 置顶，避免 Swift/SDK 的重命名差异导致编译失败
+            existing.removeFromSuperview()
+            existing.frame = bounds
+            existing.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            addSubview(existing)
             return existing
         }
         let container = ZHHPopupContainerView(frame: bounds)
