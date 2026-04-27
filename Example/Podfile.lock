@@ -1,16 +1,29 @@
 PODS:
+  - LookinServer/Core (1.2.8)
+  - LookinServer/Swift (1.2.8):
+    - LookinServer/Core
+  - SnapKit (5.7.1)
   - ZHHPopupController (0.0.2)
 
 DEPENDENCIES:
+  - LookinServer/Swift
+  - SnapKit
   - ZHHPopupController (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LookinServer
+    - SnapKit
 
 EXTERNAL SOURCES:
   ZHHPopupController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZHHPopupController: fc10a056b54aef399422de2e6b0a371d2914118f
+  LookinServer: 1b2b61c6402ae29fa22182d48f5cd067b4e99e80
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  ZHHPopupController: e6599b664070acade69de9b1152b97b52eba2d44
 
-PODFILE CHECKSUM: 14abcf33b492b5366d83280bfc91d51a7e3edfe3
+PODFILE CHECKSUM: e60ddd37baa92d88c143d426eb7446620d951253
 
 COCOAPODS: 1.16.2

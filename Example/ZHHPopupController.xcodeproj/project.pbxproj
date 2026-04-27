@@ -3,218 +3,281 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EB4A792A11EDDB76DD3DA1E /* Pods_ZHHPopupController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3533F2D9DC068EA6EA55FBE3 /* Pods_ZHHPopupController_Example.framework */; };
-		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
-		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
-		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* ZHHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* ZHHAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* ZHHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* ZHHViewController.m */; };
-		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6360B8DE918C7727F77F5636 /* Pods_ZHHPopupController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456EE2A7A7C9815ED972C63 /* Pods_ZHHPopupController_Tests.framework */; };
-		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		E7559A6B28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */; };
-		E7559A7428DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */; };
+		4A0F7EC0BBBBD1A89028FD4E /* Pods_ZHHPopupController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414218C226A712A355F1F2C /* Pods_ZHHPopupController_Tests.framework */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6B7CB0C5C5CE4CA29C2C047A /* PopupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7795029414E67A6B00DBE /* PopupExampleViewModel.swift */; };
+		6E3C1F7F2C2F4B6A8B2A0101 /* ExampleHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C1F7E2C2F4B6A8B2A0101 /* ExampleHomeViewController.swift */; };
+		6E3C1F802C2F4B6A8B2A0101 /* PopupStylesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C1F7D2C2F4B6A8B2A0101 /* PopupStylesExampleViewController.swift */; };
+		6F2A0E2B4E9B4A2D8F01A101 /* PopupExampleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E2A4E9B4A2D8F01A101 /* PopupExampleOptions.swift */; };
+		6F2A0E2C4E9B4A2D8F01A101 /* PopupExampleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E2A4E9B4A2D8F01A101 /* PopupExampleOptions.swift */; };
+		6F2A0E2F4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E2E4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift */; };
+		6F2A0E304E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E2E4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift */; };
+		6F2A0E334E9B4A2D8F01A101 /* DemoPopupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E324E9B4A2D8F01A101 /* DemoPopupContentView.swift */; };
+		6F2A0E344E9B4A2D8F01A101 /* DemoPopupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2A0E324E9B4A2D8F01A101 /* DemoPopupContentView.swift */; };
+		7EBE9CE22F88A8BD0090A61A /* DemoKeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CD82F88A8BD0090A61A /* DemoKeyboardViews.swift */; };
+		7EBE9CE52F88A8BD0090A61A /* DemoCurtainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CD72F88A8BD0090A61A /* DemoCurtainView.swift */; };
+		7EBE9CE72F88A8BD0090A61A /* PopupExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CCB2F88A8BD0090A61A /* PopupExampleViewController.swift */; };
+		7EBE9CE92F88A8BD0090A61A /* DemoSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CDA2F88A8BD0090A61A /* DemoSidebarView.swift */; };
+		7EBE9CEE2F88A8BD0090A61A /* DemoKeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CD82F88A8BD0090A61A /* DemoKeyboardViews.swift */; };
+		7EBE9CF12F88A8BD0090A61A /* DemoCurtainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CD72F88A8BD0090A61A /* DemoCurtainView.swift */; };
+		7EBE9CF32F88A8BD0090A61A /* PopupExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CCB2F88A8BD0090A61A /* PopupExampleViewController.swift */; };
+		7EBE9CF52F88A8BD0090A61A /* DemoSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CDA2F88A8BD0090A61A /* DemoSidebarView.swift */; };
+		7EBE9CF92F88AC040090A61A /* UIColor+ZHHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CF82F88AC040090A61A /* UIColor+ZHHUtilities.swift */; };
+		7EBE9CFA2F88AC040090A61A /* UIColor+ZHHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CF82F88AC040090A61A /* UIColor+ZHHUtilities.swift */; };
+		7EBE9CFC2F88C6610090A61A /* UIView+ZHHFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CFB2F88C6610090A61A /* UIView+ZHHFrame.swift */; };
+		7EBE9CFD2F88C6610090A61A /* UIView+ZHHFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBE9CFB2F88C6610090A61A /* UIView+ZHHFrame.swift */; };
+		A1B2C3D4E5F60718293A4B5D /* DemoFlopPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5C /* DemoFlopPopupView.swift */; };
+		A1B2C3D4E5F60718293A4B5E /* DemoFlopPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5C /* DemoFlopPopupView.swift */; };
+		C0A1B2C3D4E5F60718293A4C /* DemoMomentumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A1B2C3D4E5F60718293A4B /* DemoMomentumView.swift */; };
+		C0A1B2C3D4E5F60718293A4D /* DemoMomentumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A1B2C3D4E5F60718293A4B /* DemoMomentumView.swift */; };
+		B6D9AA001122334455667788 /* DemoUpdatePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9AA001122334455667787 /* DemoUpdatePopupView.swift */; };
+		B6D9AA001122334455667789 /* DemoUpdatePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9AA001122334455667787 /* DemoUpdatePopupView.swift */; };
+		B81FACD61AFB9204008FA782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FACD51AFB9204008FA782 /* SceneDelegate.swift */; };
+		BB49394558E44BC49DC0CCE8 /* PopupExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D87E759CEF4C60A55C4492 /* PopupExampleItem.swift */; };
+		DA92070EAE86F7636BFBBDE8 /* Pods_ZHHPopupController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBA590D8064F9B727CC725C /* Pods_ZHHPopupController_Example.framework */; };
+		DFA9EE83DCFE4848A1BE2DAB /* PopupExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D87E759CEF4C60A55C4492 /* PopupExampleItem.swift */; };
+		E6D7CA72AB9D48EAB01780D6 /* PopupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7795029414E67A6B00DBE /* PopupExampleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = ZHHPopupController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17AE1BD2FF9707D9A4E72E29 /* Pods-ZHHPopupController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3533F2D9DC068EA6EA55FBE3 /* Pods_ZHHPopupController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59715E2662E2C835C6AF3DBB /* Pods-ZHHPopupController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* ZHHPopupController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHHPopupController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* ZHHPopupController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZHHPopupController-Info.plist"; sourceTree = "<group>"; };
-		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* ZHHPopupController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZHHPopupController-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* ZHHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHHAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* ZHHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHHAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* ZHHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHHViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* ZHHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHHViewController.m; sourceTree = "<group>"; };
-		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* ZHHPopupController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHHPopupController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D64FAF5CD8B08FCD0613E37 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		8456EE2A7A7C9815ED972C63 /* Pods_ZHHPopupController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Example.release.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C4C0537F88F3D3AD158BFB53 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZHHPopupController.podspec; path = ../ZHHPopupController.podspec; sourceTree = "<group>"; };
-		DB90CC95404D1AD94F55FB50 /* Pods-ZHHPopupController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E7559A6928DB401300CEDBC7 /* UIViewController+StatusBarStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBarStyle.h"; sourceTree = "<group>"; };
-		E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBarStyle.m"; sourceTree = "<group>"; };
-		E7559A7228DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+zhStatusBarStyle.h"; sourceTree = "<group>"; };
-		E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+zhStatusBarStyle.m"; sourceTree = "<group>"; };
-		FF9591B7A53181747CC9C62D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2DB2404AD692AF95C9676369 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		41153F9CFDBAA96DDAD6AC84 /* Pods-ZHHPopupController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Example.release.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4438D3B7FCF203ED43291EE2 /* Pods-ZHHPopupController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		567E9E4FE23B29834C51F853 /* ZHHPopupController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZHHPopupController.podspec; path = ../ZHHPopupController.podspec; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* ZHHPopupController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHHPopupController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* ZHHPopupController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHHPopupController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		692931AC616E7896C7584560 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6E3C1F7D2C2F4B6A8B2A0101 /* PopupStylesExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupStylesExampleViewController.swift; sourceTree = "<group>"; };
+		6E3C1F7E2C2F4B6A8B2A0101 /* ExampleHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleHomeViewController.swift; sourceTree = "<group>"; };
+		6F2A0E2A4E9B4A2D8F01A101 /* PopupExampleOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupExampleOptions.swift; sourceTree = "<group>"; };
+		6F2A0E2E4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupOptionSelectionViewController.swift; sourceTree = "<group>"; };
+		6F2A0E324E9B4A2D8F01A101 /* DemoPopupContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPopupContentView.swift; sourceTree = "<group>"; };
+		7EBE9CCB2F88A8BD0090A61A /* PopupExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupExampleViewController.swift; sourceTree = "<group>"; };
+		7EBE9CD72F88A8BD0090A61A /* DemoCurtainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCurtainView.swift; sourceTree = "<group>"; };
+		7EBE9CD82F88A8BD0090A61A /* DemoKeyboardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoKeyboardViews.swift; sourceTree = "<group>"; };
+		7EBE9CDA2F88A8BD0090A61A /* DemoSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSidebarView.swift; sourceTree = "<group>"; };
+		7EBE9CF82F88AC040090A61A /* UIColor+ZHHUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZHHUtilities.swift"; sourceTree = "<group>"; };
+		7EBE9CFB2F88C6610090A61A /* UIView+ZHHFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZHHFrame.swift"; sourceTree = "<group>"; };
+		8414218C226A712A355F1F2C /* Pods_ZHHPopupController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D4E5F60718293A4B5C /* DemoFlopPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFlopPopupView.swift; sourceTree = "<group>"; };
+		C0A1B2C3D4E5F60718293A4B /* DemoMomentumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMomentumView.swift; sourceTree = "<group>"; };
+		AA0759E8609D7CD2C5AC7780 /* Pods-ZHHPopupController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AC67401AD0C6A7B06E653B10 /* Pods-ZHHPopupController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHHPopupController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZHHPopupController_Tests/Pods-ZHHPopupController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1D87E759CEF4C60A55C4492 /* PopupExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupExampleItem.swift; sourceTree = "<group>"; };
+		B6D9AA001122334455667787 /* DemoUpdatePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUpdatePopupView.swift; sourceTree = "<group>"; };
+		B81FACD51AFB9204008FA782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BAA7795029414E67A6B00DBE /* PopupExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupExampleViewModel.swift; sourceTree = "<group>"; };
+		CBBA590D8064F9B727CC725C /* Pods_ZHHPopupController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHHPopupController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6003F587195388D20070C39A /* Frameworks */ = {
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
-				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5EB4A792A11EDDB76DD3DA1E /* Pods_ZHHPopupController_Example.framework in Frameworks */,
+				DA92070EAE86F7636BFBBDE8 /* Pods_ZHHPopupController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AB195388D20070C39A /* Frameworks */ = {
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				6360B8DE918C7727F77F5636 /* Pods_ZHHPopupController_Tests.framework in Frameworks */,
+				4A0F7EC0BBBBD1A89028FD4E /* Pods_ZHHPopupController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AE0B24DB2A56C6F65BD7F69 /* Pods */ = {
+		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				59715E2662E2C835C6AF3DBB /* Pods-ZHHPopupController_Example.debug.xcconfig */,
-				BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */,
-				DB90CC95404D1AD94F55FB50 /* Pods-ZHHPopupController_Tests.debug.xcconfig */,
-				17AE1BD2FF9707D9A4E72E29 /* Pods-ZHHPopupController_Tests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		6003F581195388D10070C39A = {
-			isa = PBXGroup;
-			children = (
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for ZHHPopupController */,
-				6003F5B5195388D20070C39A /* Tests */,
-				6003F58C195388D20070C39A /* Frameworks */,
-				6003F58B195388D20070C39A /* Products */,
-				2AE0B24DB2A56C6F65BD7F69 /* Pods */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for ZHHPopupController */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				D26B654502D9B0A77981E804 /* Pods */,
+				B621C29ABA7252B273E3A756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6003F58B195388D20070C39A /* Products */ = {
+		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* ZHHPopupController_Example.app */,
-				6003F5AE195388D20070C39A /* ZHHPopupController_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* ZHHPopupController_Example.app */,
+				607FACE51AFB9204008FA782 /* ZHHPopupController_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6003F58C195388D20070C39A /* Frameworks */ = {
+		607FACD21AFB9204008FA782 /* Example for ZHHPopupController */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58D195388D20070C39A /* Foundation.framework */,
-				6003F58F195388D20070C39A /* CoreGraphics.framework */,
-				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				3533F2D9DC068EA6EA55FBE3 /* Pods_ZHHPopupController_Example.framework */,
-				8456EE2A7A7C9815ED972C63 /* Pods_ZHHPopupController_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6003F593195388D20070C39A /* Example for ZHHPopupController */ = {
-			isa = PBXGroup;
-			children = (
-				6003F59C195388D20070C39A /* ZHHAppDelegate.h */,
-				6003F59D195388D20070C39A /* ZHHAppDelegate.m */,
-				6003F5A5195388D20070C39A /* ZHHViewController.h */,
-				6003F5A6195388D20070C39A /* ZHHViewController.m */,
-				E7559A7228DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.h */,
-				E7559A7328DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m */,
-				E7559A6928DB401300CEDBC7 /* UIViewController+StatusBarStyle.h */,
-				E7559A6A28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				B82FACD01AFB9204008FA782 /* Source */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ZHHPopupController";
 			path = ZHHPopupController;
 			sourceTree = "<group>";
 		};
-		6003F594195388D20070C39A /* Supporting Files */ = {
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F595195388D20070C39A /* ZHHPopupController-Info.plist */,
-				6003F596195388D20070C39A /* InfoPlist.strings */,
-				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* ZHHPopupController-Prefix.pch */,
+				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6003F5B5195388D20070C39A /* Tests */ = {
+		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				C4C0537F88F3D3AD158BFB53 /* ZHHPopupController.podspec */,
-				7D64FAF5CD8B08FCD0613E37 /* README.md */,
-				FF9591B7A53181747CC9C62D /* LICENSE */,
+				567E9E4FE23B29834C51F853 /* ZHHPopupController.podspec */,
+				2DB2404AD692AF95C9676369 /* README.md */,
+				692931AC616E7896C7584560 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7EBE9CCD2F88A8BD0090A61A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE9CFB2F88C6610090A61A /* UIView+ZHHFrame.swift */,
+				7EBE9CF82F88AC040090A61A /* UIColor+ZHHUtilities.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7EBE9CDB2F88A8BD0090A61A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE9CD72F88A8BD0090A61A /* DemoCurtainView.swift */,
+				7EBE9CD82F88A8BD0090A61A /* DemoKeyboardViews.swift */,
+				6F2A0E324E9B4A2D8F01A101 /* DemoPopupContentView.swift */,
+				B6D9AA001122334455667787 /* DemoUpdatePopupView.swift */,
+				A1B2C3D4E5F60718293A4B5C /* DemoFlopPopupView.swift */,
+				C0A1B2C3D4E5F60718293A4B /* DemoMomentumView.swift */,
+				7EBE9CDA2F88A8BD0090A61A /* DemoSidebarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8077557F1E9F4C1C81F5328E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C1F7E2C2F4B6A8B2A0101 /* ExampleHomeViewController.swift */,
+				7EBE9CCB2F88A8BD0090A61A /* PopupExampleViewController.swift */,
+				6F2A0E2E4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift */,
+				6E3C1F7D2C2F4B6A8B2A0101 /* PopupStylesExampleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B621C29ABA7252B273E3A756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBBA590D8064F9B727CC725C /* Pods_ZHHPopupController_Example.framework */,
+				8414218C226A712A355F1F2C /* Pods_ZHHPopupController_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B65DCD45D0F4424A8007AB30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1D87E759CEF4C60A55C4492 /* PopupExampleItem.swift */,
+				6F2A0E2A4E9B4A2D8F01A101 /* PopupExampleOptions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B82FACD01AFB9204008FA782 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				B81FACD51AFB9204008FA782 /* SceneDelegate.swift */,
+				7EBE9CCD2F88A8BD0090A61A /* Common */,
+				8077557F1E9F4C1C81F5328E /* Controllers */,
+				B65DCD45D0F4424A8007AB30 /* Models */,
+				F01F4F1817124F79B369789F /* ViewModels */,
+				7EBE9CDB2F88A8BD0090A61A /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D26B654502D9B0A77981E804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4438D3B7FCF203ED43291EE2 /* Pods-ZHHPopupController_Example.debug.xcconfig */,
+				41153F9CFDBAA96DDAD6AC84 /* Pods-ZHHPopupController_Example.release.xcconfig */,
+				AC67401AD0C6A7B06E653B10 /* Pods-ZHHPopupController_Tests.debug.xcconfig */,
+				AA0759E8609D7CD2C5AC7780 /* Pods-ZHHPopupController_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F01F4F1817124F79B369789F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BAA7795029414E67A6B00DBE /* PopupExampleViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* ZHHPopupController_Example */ = {
+		607FACCF1AFB9204008FA782 /* ZHHPopupController_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZHHPopupController_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ZHHPopupController_Example" */;
 			buildPhases = (
-				577CDCABA760F2DB7884BA2B /* [CP] Check Pods Manifest.lock */,
-				6003F586195388D20070C39A /* Sources */,
-				6003F587195388D20070C39A /* Frameworks */,
-				6003F588195388D20070C39A /* Resources */,
-				6C679D6290DD9F1F1D270BF7 /* [CP] Embed Pods Frameworks */,
+				320C563457B491B74A0FACB9 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				E4A1A20E3F8CC49127AD4827 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,90 +285,92 @@
 			);
 			name = ZHHPopupController_Example;
 			productName = ZHHPopupController;
-			productReference = 6003F58A195388D20070C39A /* ZHHPopupController_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* ZHHPopupController_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* ZHHPopupController_Tests */ = {
+		607FACE41AFB9204008FA782 /* ZHHPopupController_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ZHHPopupController_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ZHHPopupController_Tests" */;
 			buildPhases = (
-				7B35213D89E8A2DA13331749 /* [CP] Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
+				CA5AB08012682AA1A3158537 /* [CP] Check Pods Manifest.lock */,
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
 			name = ZHHPopupController_Tests;
-			productName = ZHHPopupControllerTests;
-			productReference = 6003F5AE195388D20070C39A /* ZHHPopupController_Tests.xctest */;
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* ZHHPopupController_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6003F582195388D10070C39A /* Project object */ = {
+		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				CLASSPREFIX = ZHH;
-				LastUpgradeCheck = 1630;
-				ORGANIZATIONNAME = ningxiaomo0516;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "桃色三岁";
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = VAU24NCP22;
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6K33U8U7QL;
+						LastSwiftMigration = 0900;
 					};
-					6003F5AD195388D20070C39A = {
-						DevelopmentTeam = VAU24NCP22;
-						TestTargetID = 6003F589195388D20070C39A;
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6K33U8U7QL;
+						LastSwiftMigration = 0900;
+						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ZHHPopupController" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ZHHPopupController" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
-			mainGroup = 6003F581195388D10070C39A;
-			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* ZHHPopupController_Example */,
-				6003F5AD195388D20070C39A /* ZHHPopupController_Tests */,
+				607FACCF1AFB9204008FA782 /* ZHHPopupController_Example */,
+				607FACE41AFB9204008FA782 /* ZHHPopupController_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6003F588195388D20070C39A /* Resources */ = {
+		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AC195388D20070C39A /* Resources */ = {
+		607FACE31AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		577CDCABA760F2DB7884BA2B /* [CP] Check Pods Manifest.lock */ = {
+		320C563457B491B74A0FACB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,25 +392,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C679D6290DD9F1F1D270BF7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ZHHPopupController/ZHHPopupController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZHHPopupController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B35213D89E8A2DA13331749 /* [CP] Check Pods Manifest.lock */ = {
+		CA5AB08012682AA1A3158537 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,72 +414,104 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E4A1A20E3F8CC49127AD4827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ZHHPopupController/ZHHPopupController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZHHPopupController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZHHPopupController_Example/Pods-ZHHPopupController_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6003F586195388D20070C39A /* Sources */ = {
+		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* ZHHAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* ZHHViewController.m in Sources */,
-				E7559A6B28DB401300CEDBC7 /* UIViewController+StatusBarStyle.m in Sources */,
-				6003F59A195388D20070C39A /* main.m in Sources */,
-				E7559A7428DB46BC00CEDBC7 /* UIViewController+zhStatusBarStyle.m in Sources */,
+				B81FACD61AFB9204008FA782 /* SceneDelegate.swift in Sources */,
+				7EBE9CFC2F88C6610090A61A /* UIView+ZHHFrame.swift in Sources */,
+				6E3C1F7F2C2F4B6A8B2A0101 /* ExampleHomeViewController.swift in Sources */,
+				7EBE9CE22F88A8BD0090A61A /* DemoKeyboardViews.swift in Sources */,
+				E6D7CA72AB9D48EAB01780D6 /* PopupExampleViewModel.swift in Sources */,
+				BB49394558E44BC49DC0CCE8 /* PopupExampleItem.swift in Sources */,
+				6F2A0E2B4E9B4A2D8F01A101 /* PopupExampleOptions.swift in Sources */,
+				7EBE9CFA2F88AC040090A61A /* UIColor+ZHHUtilities.swift in Sources */,
+				7EBE9CE52F88A8BD0090A61A /* DemoCurtainView.swift in Sources */,
+				7EBE9CE72F88A8BD0090A61A /* PopupExampleViewController.swift in Sources */,
+				6F2A0E2F4E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift in Sources */,
+				6F2A0E334E9B4A2D8F01A101 /* DemoPopupContentView.swift in Sources */,
+				B6D9AA001122334455667788 /* DemoUpdatePopupView.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5D /* DemoFlopPopupView.swift in Sources */,
+				C0A1B2C3D4E5F60718293A4C /* DemoMomentumView.swift in Sources */,
+				7EBE9CE92F88A8BD0090A61A /* DemoSidebarView.swift in Sources */,
+				6E3C1F802C2F4B6A8B2A0101 /* PopupStylesExampleViewController.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6003F5AA195388D20070C39A /* Sources */ = {
+		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				7EBE9CEE2F88A8BD0090A61A /* DemoKeyboardViews.swift in Sources */,
+				6B7CB0C5C5CE4CA29C2C047A /* PopupExampleViewModel.swift in Sources */,
+				7EBE9CFD2F88C6610090A61A /* UIView+ZHHFrame.swift in Sources */,
+				DFA9EE83DCFE4848A1BE2DAB /* PopupExampleItem.swift in Sources */,
+				6F2A0E2C4E9B4A2D8F01A101 /* PopupExampleOptions.swift in Sources */,
+				7EBE9CF12F88A8BD0090A61A /* DemoCurtainView.swift in Sources */,
+				7EBE9CF32F88A8BD0090A61A /* PopupExampleViewController.swift in Sources */,
+				6F2A0E304E9B4A2D8F01A101 /* PopupOptionSelectionViewController.swift in Sources */,
+				6F2A0E344E9B4A2D8F01A101 /* DemoPopupContentView.swift in Sources */,
+				B6D9AA001122334455667789 /* DemoUpdatePopupView.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5E /* DemoFlopPopupView.swift in Sources */,
+				C0A1B2C3D4E5F60718293A4D /* DemoMomentumView.swift in Sources */,
+				7EBE9CF52F88A8BD0090A61A /* DemoSidebarView.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				7EBE9CF92F88AC040090A61A /* UIColor+ZHHUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* ZHHPopupController_Example */;
-			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+			target = 607FACCF1AFB9204008FA782 /* ZHHPopupController_Example */;
+			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6003F597195388D20070C39A /* en */,
+				607FACDF1AFB9204008FA782 /* Base */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71719F9E1E33DC2100824A3D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6003F5BD195388D20070C39A /* Debug */ = {
+		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -441,17 +520,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -459,10 +535,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = VAU24NCP22;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -478,18 +553,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		6003F5BE195388D20070C39A /* Release */ = {
+		607FACEE1AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -498,28 +573,24 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = VAU24NCP22;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -528,124 +599,123 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		6003F5C0195388D20070C39A /* Debug */ = {
+		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59715E2662E2C835C6AF3DBB /* Pods-ZHHPopupController_Example.debug.xcconfig */;
+			baseConfigurationReference = 4438D3B7FCF203ED43291EE2 /* Pods-ZHHPopupController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
-				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				DEVELOPMENT_TEAM = 6K33U8U7QL;
+				INFOPLIST_FILE = ZHHPopupController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		6003F5C1195388D20070C39A /* Release */ = {
+		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFF48F46FD613DCF66900661 /* Pods-ZHHPopupController_Example.release.xcconfig */;
+			baseConfigurationReference = 41153F9CFDBAA96DDAD6AC84 /* Pods-ZHHPopupController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ZHHPopupController/ZHHPopupController-Prefix.pch";
-				INFOPLIST_FILE = "ZHHPopupController/ZHHPopupController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				DEVELOPMENT_TEAM = 6K33U8U7QL;
+				INFOPLIST_FILE = ZHHPopupController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		6003F5C3195388D20070C39A /* Debug */ = {
+		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB90CC95404D1AD94F55FB50 /* Pods-ZHHPopupController_Tests.debug.xcconfig */;
+			baseConfigurationReference = AC67401AD0C6A7B06E653B10 /* Pods-ZHHPopupController_Tests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6K33U8U7QL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHHPopupController_Example.app/ZHHPopupController_Example";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		6003F5C4195388D20070C39A /* Release */ = {
+		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17AE1BD2FF9707D9A4E72E29 /* Pods-ZHHPopupController_Tests.release.xcconfig */;
+			baseConfigurationReference = AA0759E8609D7CD2C5AC7780 /* Pods-ZHHPopupController_Tests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6K33U8U7QL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHHPopupController_Example.app/ZHHPopupController_Example";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "ZHHPopupController" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ZHHPopupController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5BD195388D20070C39A /* Debug */,
-				6003F5BE195388D20070C39A /* Release */,
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZHHPopupController_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ZHHPopupController_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C0195388D20070C39A /* Debug */,
-				6003F5C1195388D20070C39A /* Release */,
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ZHHPopupController_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ZHHPopupController_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6003F582195388D10070C39A /* Project object */;
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "ZHHPopupController.h"
 
 FOUNDATION_EXPORT double ZHHPopupControllerVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZHHPopupControllerVersionString[];
